@@ -8,27 +8,29 @@
 <body>
   <p>
     <?php
-
+    
     function sort_2way($array, $order){
-
       if($order) {
         //true
         echo "昇順にソートします。<br>";
         sort($array);
       } else {
         //false
-        echo "昇順にソートします。<br>";
+        echo "降順にソートします。<br>";
         rsort($array);
-       }
+      }
 
        foreach($array as $nums ){
         echo $nums . '<br>';
       }
     }
-    
+
+
     $nums = [15, 4, 18, 23, 10];
     sort_2way($nums, true);
     sort_2way($nums, false);
+
+
 
 
     ?>
